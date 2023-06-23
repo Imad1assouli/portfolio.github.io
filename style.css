@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css?family=Abril Fatface&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Kablammo&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Oswald';
+}
+
+body {
+    font-size: 16px;
+}
+h1{
+    font-size: 46px;
+    line-height: 64px;
+    color: black;
+}
+h2{
+    
+    font-size: 46px;
+    line-height: 54px;
+    color: black;
+}
+h4{
+    font-size: 20px;
+    color: black;
+}
+h6{
+    font-weight: 700px;
+   font-size: 12px;
+}
+p{
+    font-size: 16px;
+    color: #000000;
+    margin:15px 0 20px 0;
+}
+.section-p1{
+    padding: 50px 60px;
+}
+
+
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 80px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+#header a.logo {
+    text-decoration: none;
+    color: black;
+    font-size: 25px;
+    font-weight: 900;
+    font-family: 'Kablammo';
+}
+
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#navbar li {
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+}
+
+#navbar li a {
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+#navbar li button {
+    font-size: 17px;
+    font-weight: 600;
+    transition: 0.3s ease;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+}
+
+body.dark-mode #navbar li a:hover,
+body.dark-mode #navbar li button:hover,
+body.dark-mode #navbar li a.active,
+#navbar li a:hover,
+#navbar li button:hover,
+#navbar li a.active {
+    color: #ff9900;
+}
+
+body.dark-mode #navbar li a:hover::after,
+body.dark-mode #navbar li a.active::after,
+#navbar li a:hover::after,
+#navbar li a.active::after {
+    content: "";
+    width: 30%;
+    height: 2px;
+    background-color: #ff9900;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #000000;
+    color: #ffffff7a;
+}
+
+body.dark-mode #header {
+    background-color: #000000;
+
+}
+
+/* Additional dark mode styles for specific elements */
+body.dark-mode #header a.logo {
+    color: #ffffff;
+}
+
+body.dark-mode #navbar a,
+body.dark-mode #mobile i  {
+    color: #ffffff;
+}
+
+body.dark-mode #navbar .active {
+    color: #ff9900;
+}
+
+#mobile ,#close {
+    display: none;
+}
+
+@media (max-width: 799px) {
+    #navbar {
+        display: flex;
+        flex-direction: column;
+        align-self: flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        top: 0;
+        right: -300px;
+        height: 100vh;
+        width: 300px;
+        box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+        padding: 80px 0 0 10px;
+    }
+
+    #navbar.active {
+        right: 0px;
+    }
+
+    #navbar li {
+        margin-bottom: 25px;
+    }
+
+    #mobile {
+        display: flex;
+        align-items: center;
+    }
+
+    #mobile i {
+        color: #000000;
+        font-size: 24px;
+        padding-left: 20px;
+    }
+
+    #close {
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        font-size: 17px;
+        color: #000000;
+    }
+    #mobile ,#close {
+        display:block;
+    }
+   
+}
+
+
+@media(max-width:477px){
+    #header{
+        padding: 10px 30px;
+    }
+    h1{
+font-size: 38px;
+    }
+    h2{
+font-size: 32px;
+    }
+}
+
+
+#hero{
+    background-image: url('perron.jpg');
+    height: 90vh;
+    width: 100%;
+    background-position: top 5%;
+    background-size: cover;
+    padding: 0 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+body.dark-mode #hero h1 ,body.dark-mode #hero h4{
+    color: white;
+}
+
+@media (max-width: 767px) {
+  #hero {
+    height: auto;
+    padding: 40px 20px;
+  }
+}
+
+@media (max-width: 1024px) {
+  #hero {
+    background-position: center top;
+  }
+}
+#about h1{
+    text-align: center;
+}
+body.dark-mode h1,body.dark-mode p{
+    color: white;
+}
+#about img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+  
+  .content-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .image-container {
+    flex-basis: 60%;
+  }
+  
+  .text-container {
+    flex-basis: 55%;
+    padding-top: 100px;
+    text-align: left;
+  }
+  /* Media query for iPad devices */
+@media (max-width: 1112px) {
+    .content-wrapper {
+      flex-direction: column;
+    }
+  
+    .image-container,
+    .text-container {
+      flex-basis: 100%;
+      padding-top: 0;
+    }
+  }
+/* Media query for mobile devices */
+@media (max-width: 767px) {
+    .content-wrapper {
+      flex-direction: column;
+    }
+  
+    .image-container,
+    .text-container {
+      flex-basis: 100%;
+      padding-top: 0;
+    }
+  }
