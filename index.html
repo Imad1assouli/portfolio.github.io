@@ -16,9 +16,9 @@
             <ul id="navbar">
                 <li><a href="" class="active">Home</a></li>
                 <li><a href="#about">About Me</a></li>
-                <li><a href="#">Skills</a></li>
-                <li><a href="#">Education</a></li>
-                <li><a href="#">Experience</a></li>
+                <li><a href="#about">Skills</a></li>
+                <li ><a href="#about">Education</a></li>
+                <li><a href="#about">Projects</a></li>
                 <li><a href="#">Contact</a></li>
                 <li><a id="darkmode-icon" onclick="toggleDarkMode()"><i class="fa-solid fa-moon"></i></a></li>
                 <a href="#" id="close"><i class="fa-solid fa-xmark"></i></a>
@@ -35,19 +35,64 @@
         <h4>Software Engineer</h4>
     </section>
     <section id="about" class="section-p1">
-        <h1>About Me</h1>
+        <h1>About <span style="color: red;">Me</span></h1>
         <div class="content-wrapper">
             <img src="imad.png" alt="Imad Image">
-          <div class="text-container">
-            <p> ipsum dolor sit amet consectetur adipisicing elit. Incidunt tempora ullam veritatis ab, blanditiis, in necessitatibus nisi
-                , eaque velit totam ipsam! Aspernatur ex officiis reprehenderit dolorum est recusandae dignissimos iure!
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                 Nam numquam dicta tempore quaerat repellat aliquam quam tempora incidunt repudiandae quae ipsum excepturi nihil,
-                  libero reprehenderit! Placeat repudiandae consectetur deserunt quo.</p>
-          </div>
-        </div>
-      </section>
+           <div class="text-container">
+            <p>I am a software engineering student at the Applied Sciences School in Khouribga. I have a passion for programming and problem-solving. </p>
+            <p>As a student, I have completed several projects that have enhanced my skills and understanding.</p>
+            <p>In addition to my technical skills, I am a detail-oriented individual with a strong focus on problem-solving. 
+                I enjoy tackling complex challenges and finding innovative solutions. 
+                I am constantly seeking opportunities to expand my knowledge and stay up-to-date with the latest advancements in the field of software engineering.
+                 I am eager to apply my skills and contribute to meaningful projects that make a positive impact.</p>
+             <div class="tab-titles">
+                <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                <p class="tab-links" onclick="opentab('education')">Education</p>
+                <p class="tab-links" onclick="opentab('projects')">Projects</p>
+             </div>     
+             <div class="tab-contents active-tab" id="skills">
+                <ul>
+                    <ul>
+                        <li><span>Programming Languages:</span> Java, C, C++, Python</li>
+                        <li><span>Web Development:</span> HTML, CSS, JavaScript,Php</li>
+                        <li><span>Frameworks:</span> React, Angular, Spring,Laravel,Bootstrap</li>
+                        <li><span>Version Control:</span> Git</li>
+                        <li><span>Database:</span> SQL</li>
+                        <li><span>Operating Systems:</span> Windows, Linux</li>
+                        <li><span>Problem Solving:</span> Algorithms, Data Structures</li>
+                        <li><span>UI/UX Design:</span> Adobe XD</li>
+                        <li><span>Database Design:</span> Merise</li>
+                    </ul>
+                </ul>
+             </div>
+             <div class="tab-contents" id="projects">
+                <ul>
+                    <li><span>Academic projects managment</span><br>Java, MySql, Merise</li>
+                    <li><span>Expert system </span><br>C++, Advanced Algorithms, Data Structures  </li>
+                    <li><span>Hotel managment</span><br>C++ </li>
+                    <li><span>jeu morpion</span><br>Python </li>
+                    <li><span>Student managment</span><br>C </li>
+                    <li><span>Library managment</span><br>Microsoft Access, Merise </li>
+                    
+                    
+                     
+                </ul>
+             </div>
+             <div class="tab-contents" id="education">
+                <ul>
+                    <li><span>2022-current</span><br>Software enginnering student at aplied sciences school Khouribga</li>
+                    <li><span>2020-2022</span><br>Student in integrated preparatory classes at appliend sciences school Khouribga </li>
+                    <li><span>2019-2020</span><br>Student at faculty of technical sciences Mohammedia </li>
+                    <li><span>2017-2020</span><br>Hight school Al Azhar Khouribga </li>
+                </ul>
+             </div>
 
+         </div>
+        </div>
+    </section>
+
+    <!-- Scroll to top button -->
+    <button id="scrollToTopBtn" onclick="scrollToTop()">&#8593;</button>
     <script src="script.js"></script>
 </body>
 

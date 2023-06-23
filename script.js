@@ -1,7 +1,41 @@
-//Responsive slidebar Menu
+var tablinks = document.getElementsByClassName("tab-links");
+var tabcontents = document.getElementsByClassName("tab-contents");
+
+function opentab(tabname) {
+    for (tablink of tablinks) {
+        tablink.classList.remove("active-link");
+    }
+    for (tabcontent of tabcontents) {
+        tabcontent.classList.remove("active-tab");
+    }
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+}
+
+
+
+// Responsive slidebar Menu
 const bar = document.getElementById('bar');
 const close = document.getElementById('close');
 const nav = document.getElementById('navbar');
+
+// Scroll to top function
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+}
+
+// Show/hide the scroll to top button
+window.addEventListener("scroll", function () {
+    var scrollToTopBtn = document.getElementById("scrollToTopBtn");
+    if (window.scrollY > 250) {
+        scrollToTopBtn.classList.add("show");
+    } else {
+        scrollToTopBtn.classList.remove("show");
+    }
+});
 
 if (bar && close) {
     bar.addEventListener('click', () => {
@@ -15,18 +49,18 @@ if (bar && close) {
     });
 }
 
-//Dark mode
+// Dark mode
 function toggleDarkMode() {
     var body = document.body;
     body.classList.toggle("dark-mode");
     var isDarkMode = body.classList.contains("dark-mode");
     saveDarkModePreference(isDarkMode);
 }
-  
+
 function saveDarkModePreference(isDarkMode) {
     localStorage.setItem("darkMode", isDarkMode);
 }
-  
+
 function loadDarkModePreference() {
     var isDarkMode = localStorage.getItem("darkMode");
     if (isDarkMode === "true") {
@@ -35,6 +69,6 @@ function loadDarkModePreference() {
         document.body.classList.remove("dark-mode");
     }
 }
-  
+
 // Load the dark mode preference when the page loads
 window.addEventListener("load", loadDarkModePreference);
