@@ -12,13 +12,6 @@ function opentab(tabname) {
     document.getElementById(tabname).classList.add("active-tab");
 }
 
-
-
-// Responsive slidebar Menu
-const bar = document.getElementById('bar');
-const close = document.getElementById('close');
-const nav = document.getElementById('navbar');
-
 // Scroll to top function
 function scrollToTop() {
     window.scrollTo({
@@ -37,6 +30,11 @@ window.addEventListener("scroll", function () {
     }
 });
 
+// Responsive slidebar Menu
+const bar = document.getElementById('bar');
+const close = document.getElementById('close');
+const nav = document.getElementById('navbar');
+
 if (bar && close) {
     bar.addEventListener('click', () => {
         nav.classList.add('active');
@@ -46,6 +44,16 @@ if (bar && close) {
     close.addEventListener('click', () => {
         nav.classList.remove('active');
         close.style.display = 'none';
+    });
+    document.addEventListener('click', (event) => {
+        const targetElement = event.target;
+    
+        // Vérifier si l'élément cliqué est en dehors de la barre de navigation
+        if (!targetElement.closest('#header')) {
+            // Masquer la barre de navigation et l'icône de fermeture
+            nav.classList.remove('active');
+            close.style.display = 'none';
+        }
     });
 }
 

@@ -343,12 +343,152 @@ body.dark-mode h1,body.dark-mode p{
     .content-wrapper {
       flex-direction: column;
     }
-  
+
     .image-container,
     .text-container {
       flex-basis: 100%;
       padding-top: 0;
     }
   }
- 
+
   
+
+ #contact h1{
+    text-align: center;
+}
+
+body.dark-mode h1,body.dark-mode p{
+    color: white;
+}
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+.contact-left{
+    flex-basis: 35%;
+  }
+.contact-right{
+    
+    flex-basis: 55%;
+   
+
+  }
+  .contact-left p{
+    margin-top: 30px;
+  }
+  .contact-left p i{
+    color: red;
+    margin-right:3px;
+    font-size: 25px;
+  }
+  .social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ababab;
+    display: inline-block;
+    transition: transform 0.5s;
+  }
+  .social-icons a:hover{
+    color: red;
+    transform:translateY(-5px) ;
+  }
+  
+  .contact-left button{
+    border: none;
+    padding: 10px 30px;
+    font-size:  20px;
+    position: relative;
+    background: transparent;
+    margin-top: 30px;
+    color: #000000;
+    text-transform: uppercase;
+    border: 3px solid #000000;
+    cursor: pointer;
+    transition: all 0.7s;
+    overflow: hidden;
+    border-radius: 100px;
+}
+.contact-left button:hover {
+     color:red;
+     transform:translateY(-5px) ;
+ }
+  .contact-right form{
+    width: 100%;
+    padding: 20px;
+   
+  }
+  form input,form textarea{
+    width: 100%;
+    border: 0 ;
+    outline:none;
+    padding: 15px;
+    background: #bababa;
+    font-size:18px ;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  form textarea{
+    resize: none;
+    height: 150px;
+    width: 100%;
+
+  }  
+  
+  form .btn2{
+    border: none;
+    padding: 10px 30px;
+    font-size:  20px;
+    position: relative;
+    background: transparent;
+    color: black;
+    text-transform: uppercase;
+    border: 3px solid black;
+    cursor: pointer;
+    transition: all 0.7s;
+    overflow: hidden;
+    border-radius: 100px
+  }
+  
+  body.dark-mode form .btn2,
+  body.dark-mode .contact-left button{
+    color: white;
+    border: 3px solid white;
+  }
+  form .btn2:hover,
+  body.dark-mode form .btn2:hover,
+  body.dark-mode .contact-left button:hover{
+    color: red;
+    transform:translateY(-5px) ;
+  }
+  
+
+  .copyright{
+    width: 100%;
+    padding: 0px;    
+  }
+  .copyright p{
+    text-align: center;
+  }
+  @media(max-width:799px){
+    footer {
+        display: flex;
+      }
+      .contact-left, .contact-right{
+        flex-basis: 100%;
+
+      }
+      .contact-left button,form .btn2{
+        padding: 8px 20px;
+        font-size:  13px;
+        border: 2px solid #000000;
+       
+      }
+      .copyright p{
+        font-size: 14px;
+      }
+    
+
+  }
